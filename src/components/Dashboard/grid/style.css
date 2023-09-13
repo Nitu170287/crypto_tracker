@@ -1,0 +1,115 @@
+.grid-container {
+    width: 300px;
+    
+    background-color: var(--darkgrey);
+    border: 2px solid var(--darkgrey);
+    border-radius: 0.5rem;
+}
+.grid-container:hover{
+    border: 2px solid var(--green);
+    transition: all 0.3s;
+}
+.grid-container-red:hover{
+    border: 2px solid var(--red);
+    transition: all 0.3s;
+}
+
+.coin-info {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1rem;
+    margin: 1rem 1.5rem;
+}
+
+.coin-logo {
+    width: 3.5rem;
+    height: 3.5rem;
+
+}
+
+.name-col {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.coin-symbol {
+    font-weight: 600;
+    text-transform: capitalize;
+    font-size: 1.5rem;
+    color: var(--white);
+    margin: 0;
+}
+
+.coin-name {
+    font-weight: normal;
+    text-transform: capitalize;
+    font-size: 1rem;
+    color: var(--grey);
+    margin: 0;
+}
+
+.chip-flex {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 1rem 1.5rem;
+    gap: 1rem;
+}
+
+.chip-price {
+    border: 2px solid var(--green);
+    color: var(--green);
+    border-radius: 2rem;
+    padding: 0.35rem 1.25rem;
+    font-size: 1rem;
+    text-align: center;
+    font-weight: 600;
+}
+
+.chip-price:hover {
+    background-color: var(--green);
+    color: var(--white);
+    transition: all 0.3s;
+}
+
+.chip-red {
+    border: 2px solid var(--red) !important;
+    color: var(--red) !important;
+
+}
+
+.chip-red:hover {
+    background-color: var(--red)!important;
+    color: var(--white)!important;
+    transition: all 0.3s;
+}
+
+.icon {
+    border: 2px solid var(--green);
+    color: var(--green);
+    border-radius: 50%;
+    width: 2rem;
+    height: 2rem;
+    font-size: 1rem;
+    text-align: center;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon:hover {
+    background-color: var(--green);
+    color: var(--white);
+    transition: all 0.3s;
+}
+.curent-price{
+    margin: 1.5rem;
+}
+
+.total-volume{
+    color: var(--grey);
+    font-weight: 500;
+}

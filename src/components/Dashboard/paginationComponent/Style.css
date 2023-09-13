@@ -1,0 +1,11 @@
+.pagination-componenet{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom:2.5rem;
+    
+}
+/* .pagination-componenet li button {
+    color: var(--white) !important;
+    border: 1px solid var(--grey) ;
+} */

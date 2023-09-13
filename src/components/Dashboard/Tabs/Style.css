@@ -1,0 +1,32 @@
+
+.grid-flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:1.5rem;
+    flex-wrap: wrap;
+    margin:1.5rem 3rem;
+}
+
+.list-table{
+    width:90%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.no-search-result{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    margin: 1.5rem;
+}
+.no-search-result button{
+    padding: 1rem;
+    margin: 1.5rem;
+    background-color: var(--blue);
+    border-radius: 1.5rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+}

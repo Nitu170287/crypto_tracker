@@ -1,0 +1,84 @@
+.list-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.5rem;
+    margin: 1.5rem;
+    padding: 1rem;
+    border-radius: 0.5rem;
+}
+
+.list-row:hover {
+    background-color: var(--darkgrey);
+
+}
+
+.list-row td {
+    text-align: left;
+    width: 18%;
+}
+
+.td-image {
+    width: 3rem !important;
+    margin-right: 3rem;
+   
+}
+.mobile-market-cap{
+    display: none;
+}
+
+
+
+
+@media only screen and (max-width: 1000px) {
+
+    .icon,
+    .mobile-total-volume {
+        display: none;
+    }
+
+    
+   
+
+
+}
+
+@media only screen and (max-width: 800px) {
+
+    .mobile-market-cap,
+    .mobile-current-price, .mobile-coin-symbol, .mobile-coin-name
+     {
+        font-size: 65%;
+    }
+    
+
+    .list-row {
+
+        margin: 1rem;
+        padding: 0.7rem;
+
+    }
+
+    .list-row td {
+
+        width: 15% !important;
+    }
+
+    .mobile-coin-logo{
+        width: 30px !important;
+        height: 30px;
+    }
+    .mobile-chip-price{
+        font-size: 50%;
+        border-radius: 0.6rem;
+        margin: 1rem 0;
+        padding: 0.25rem;
+    }
+    .desktop-market-cap{
+        display: none;
+    }
+    .mobile-market-cap{
+        display: block;
+    }
+    
+}
