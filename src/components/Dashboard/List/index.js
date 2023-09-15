@@ -3,10 +3,12 @@ import TrendingUpIcon from "@mui/icons-material/TrendingUp";
 import TrendingDownIcon from '@mui/icons-material/TrendingDown';
 import Tooltip from '@mui/material/Tooltip';
 import convertNumber from "../../../functions/convertNumver"
+import { Link } from "react-router-dom";
 
 
 const List = ({ coin }) => {
   return (
+    <Link to={`/coin/${coin.id}`}>
     <tr className="list-row">
     <Tooltip title="Coin logo" placement="bottom-start">
       <td className="td-image mobile-td-img">
@@ -15,7 +17,7 @@ const List = ({ coin }) => {
       </Tooltip>
       <td>
         <div className="name-col mobile-name-col">
-          <p className="coin-symbol mobile-coin-symbol">{coin.symbol}</p>
+          <p className="coin-symbol mobile-coin-symbol">{coin.symbol.toUpperCase()}</p>
           <p className="coin-name mobile-coin-name">{coin.name}</p>
         </div>
       </td>
@@ -23,7 +25,7 @@ const List = ({ coin }) => {
       {coin.price_change_percentage_24h > 0 ? (
         <td className="chip-flex">
           <div className="chip-price mobile-chip-price">
-            {coin.price_change_percentage_24h.toFixed(2)}%
+            {coin.price_change_percentage_24h?.toFixed(2)}%
           </div>
           <td className="icon">
             <TrendingUpIcon />
@@ -32,7 +34,7 @@ const List = ({ coin }) => {
       ) : (
         <td className="chip-flex ">
           <div className="chip-price mobile-chip-price chip-red">
-            {coin.price_change_percentage_24h.toFixed(2)}%
+            {coin.price_change_percentage_24h?.toFixed(2)}%
           </div>
           <td className="icon chip-red">
             <TrendingDownIcon />
@@ -70,6 +72,7 @@ const List = ({ coin }) => {
       </td>
       </Tooltip>
     </tr>
+    </Link>
   );
 };
 export default List;
