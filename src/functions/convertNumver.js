@@ -17,7 +17,7 @@
   } else {
     //hundred
 
-    return numberArr[0] + "." + numberArr[1].slice(0, 2) + "H";
+    return numberArr[0] + "." + numberArr[1]?.slice(0, 2) + "H";
   }
 };
 export default convertNumber

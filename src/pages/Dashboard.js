@@ -6,6 +6,7 @@ import SearchBar from "../components/Dashboard/SearchBar";
 import PaginationComponent from "../components/Dashboard/paginationComponent";
 import Loader from "../components/Common/loader";
 import BackToTop from "../components/Common/BackToTop"
+import get100Coins from "../functions/get100Coins"
 
 const DashboardPage = () => {
   const [coins, setCoins] = useState([]);
@@ -31,18 +32,19 @@ const DashboardPage = () => {
   );
 
   useEffect(() => {
-    axios
-      .get(
-        "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=100&page=1&sparkline=false&locale=en"
-      )
-      .then((response) => {
-        console.log(response);
-        setCoins([...response.data]);
-        setPaginatedCoin([...response.data.slice(0, 10)]);
-        setIsLoading(false);
-      })
-      .catch((err) => console.log(err));
+    getData()
   }, []);
+
+  const getData = async ()=>{
+
+    const coins = await get100Coins()
+    if(coins){
+      setCoins(coins);
+        setPaginatedCoin(coins.slice(0, 10));
+        setIsLoading(false);
+  }
+    }
+    
 
   return (
     <>

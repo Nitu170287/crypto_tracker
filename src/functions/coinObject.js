@@ -1,5 +1,6 @@
 
  export const coinObject = (setState, data)=>{
+   console.info("coinObject")
     setState({
     id: data.id,
     name:data.name,
