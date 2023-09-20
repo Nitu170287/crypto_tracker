@@ -19,7 +19,7 @@ const List = ({ coin, addedToWatchList, parentUpdateWatchlist }) => {
         <tr className="list-row">
           <Tooltip title="Coin logo" placement="bottom-start">
             <td className="td-image mobile-td-img">
-              <img src={coin.image} className="coin-logo mobile-coin-logo" />
+              <img src={coin.image} className="coin-logo mobile-coin-logo" alt="phone" />
             </td>
           </Tooltip>
           <td>

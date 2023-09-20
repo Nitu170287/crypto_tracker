@@ -9,7 +9,7 @@ const Watchlist = () => {
 
   useEffect(() => {
     displayWatchListData();
-  }, []);
+  }, [displayWatchListData]);
 
   async function displayWatchListData() {
     const watchlistData = JSON.parse(

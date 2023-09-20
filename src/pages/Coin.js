@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import Loader from "../components/Common/loader";
-import axios from "axios";
+
 import Header from "../components/Common/Header";
 import { coinObject } from "../functions/coinObject";
 import List from "../components/Dashboard/List";
@@ -9,7 +9,7 @@ import CoinInfo from "../components/Coin/coinInfo";
 import { getCoinData } from "../functions/getCoinData";
 import { getCoinPrices } from "../functions/getCoinPrices";
 import LineChart from "../components/Coin/lineChart";
-import { convertDate } from "../functions/converDate";
+
 import SelectDays from "../components/Coin/selectDays";
 import { settingChartData } from "../functions/settingChartData";
 import PriceToggle from "../components/Coin/priceToggle";
@@ -20,7 +20,7 @@ const CoinPage = () => {
   const [coindata, setCoinData] = useState();
   const [days, setDays] = useState(30);
   const [chartData, setChartData] = useState();
-  const [priceType, setPriceType] = useState("prices" );
+  const [priceType, setPriceType] = useState("prices");
 
   useEffect(() => {
     if (id) {
@@ -87,7 +87,9 @@ const CoinPage = () => {
               priceType={priceType}
               handlePriceChange={handlePriceChange}
             />
-            {chartData ? <LineChart chartData={chartData}  priceType={priceType}/> : null}
+            {chartData ? (
+              <LineChart chartData={chartData} priceType={priceType} />
+            ) : null}
           </div>
         </>
       )}

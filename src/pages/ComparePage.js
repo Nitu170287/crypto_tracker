@@ -26,7 +26,7 @@ const ComparePage = () => {
 
   useEffect(() => {
     getData();
-  }, []);
+  }, [getData]);
 
   async function getData() {
     setIsLoading(false);

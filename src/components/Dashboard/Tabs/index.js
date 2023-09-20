@@ -9,21 +9,27 @@ import Grid from "../grid";
 import List from "../List";
 import "./Style.css";
 
-export default function TabsComponent({ coins,setSearch, displayWatchListData }) {
+export default function TabsComponent({
+  coins,
+  setSearch,
+  displayWatchListData,
+}) {
   const [value, setValue] = useState("grid");
-  const [watchList, setWatchList] = useState([])
+  const [watchList, setWatchList] = useState([]);
 
   function updateWatchlist() {
-    let localStorageWatchlist = JSON.parse(localStorage.getItem("cryptoWatchList") || "[]")
-    setWatchList(localStorageWatchlist)
-    if (displayWatchListData){
-      displayWatchListData()
+    let localStorageWatchlist = JSON.parse(
+      localStorage.getItem("cryptoWatchList") || "[]"
+    );
+    setWatchList(localStorageWatchlist);
+    if (displayWatchListData) {
+      displayWatchListData();
     }
   }
 
-  useEffect(()=>{
+  useEffect(() => {
     updateWatchlist();
-  },[])
+  }, [updateWatchlist]);
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
@@ -59,19 +65,38 @@ export default function TabsComponent({ coins,setSearch, displayWatchListData })
 
         <TabPanel value="grid">
           <div className="grid-flex">
-            {
-              coins.length > 0 ? 
-            coins.map((coin, i) => {
-              return <Grid coin={coin} key={i} parentUpdateWatchlist={updateWatchlist}  addedToWatchList={watchList.indexOf(coin.id) > -1}/>;
-            }) 
-            : <div className="no-search-result">{"Search result not found " }<button onClick={()=>setSearch("")}>Clear search input</button></div>
-            }
+            {coins.length > 0 ? (
+              coins.map((coin, i) => {
+                return (
+                  <Grid
+                    coin={coin}
+                    key={i}
+                    parentUpdateWatchlist={updateWatchlist}
+                    addedToWatchList={watchList.indexOf(coin.id) > -1}
+                  />
+                );
+              })
+            ) : (
+              <div className="no-search-result">
+                {"Search result not found "}
+                <button onClick={() => setSearch("")}>
+                  Clear search input
+                </button>
+              </div>
+            )}
           </div>
         </TabPanel>
         <TabPanel value="list">
           <table className="list-table">
             {coins.map((coin, i) => {
-              return <List coin={coin} key={i} parentUpdateWatchlist={updateWatchlist} addedToWatchList={watchList.indexOf(coin.id)>-1} />;
+              return (
+                <List
+                  coin={coin}
+                  key={i}
+                  parentUpdateWatchlist={updateWatchlist}
+                  addedToWatchList={watchList.indexOf(coin.id) > -1}
+                />
+              );
             })}
           </table>
         </TabPanel>
