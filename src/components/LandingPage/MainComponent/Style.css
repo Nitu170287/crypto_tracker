@@ -46,7 +46,7 @@
 }
 .iphone{
     position: absolute;
-    z-index: 100;
+    z-index: 1;
     width:50%;
     min-width: 300px;
     
