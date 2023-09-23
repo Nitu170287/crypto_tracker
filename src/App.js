@@ -31,7 +31,7 @@ function App() {
     <BrowserRouter>
     
       <Routes>
-        <Route path="/" element={<HomePage setMode={setMode} />} />
+        <Route path="/" element={<HomePage setMode={setMode} mode={mode} />} />
         <Route path="/dashboard" element={<DashboardPage setMode={setMode} />} />
         <Route path="/coin/:id"  element={<CoinPage setMode={setMode}/>} />
         <Route path="/compare"  element={<ComparePage setMode={setMode}/>} />

@@ -1,25 +1,26 @@
-.btn{
-    background-color: var(--blue);
-    color : var(--white);
-    padding : 0.5rem 1.7rem;
+.btn {
+    background-color: var(--orange);
+    color: var(--white);
+    padding: 0.5rem 1.7rem;
     border-radius: 3rem;
     font-weight: 600;
     cursor: pointer;
-    border: 2px solid var(--blue) ;
+    border: 2px solid var(--orange);
     text-align: center;
     min-width: 100px;
     text-transform: capitalize;
 }
-.btn:hover{
-    box-shadow: 5px 5px 10px 0px rgba(58,128,233,0.5);
+
+.btn:hover {
+    box-shadow: 5px 5px 10px 0px rgba(233, 111, 58, 0.5);
     transition: all 0.3s;
 }
 
-.outlined-btn{
+.outlined-btn {
     background-color: var(--black);
-    border: 2px solid var(--blue);
-    color : var(--white);
-    padding : 0.5rem 1.7rem;
+    border: 2px solid var(--orange);
+    color: var(--white);
+    padding: 0.5rem 1.7rem;
     border-radius: 3rem;
     font-weight: 600;
     cursor: pointer;
@@ -27,7 +28,8 @@
     min-width: 100px;
     text-transform: capitalize;
 }
-.outlined-btn:hover{
-    background-color: var(--blue);
+
+.outlined-btn:hover {
+    background-color: var(--orange);
     transition: all 0.3s;
 }

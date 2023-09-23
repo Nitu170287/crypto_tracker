@@ -3,7 +3,7 @@
 :root {
   --white: #fff;
   --black: #000;
-  --blue: #E55604;
+  --orange: #E55604;
   --grey: #888;
   --darkgrey: #1b1b1b;
   --green: #61c96f;
@@ -22,7 +22,7 @@ body {
 
 /* after selecting background color and font color change--custome selection */
 ::selection {
-  background-color: var(--blue);
+  background-color: var(--orange);
   color: var(--white)
 }
 
@@ -42,7 +42,8 @@ body {
 ::-webkit-scrollbar-thumb {
   background: #888;
 }
-html{
+
+html {
   scroll-behavior: smooth;
 }
 
@@ -58,20 +59,20 @@ img {
 
 }
 
-.grey-wrapper{
+.grey-wrapper {
   display: block;
-  width:90%;
+  width: 90%;
   background-color: var(--darkgrey);
   margin: 1.5rem auto;
   border-radius: 0.5rem;
   padding: 0rem 1.5rem;
- 
+
 }
 
-.coin-days-flex{
+.coin-days-flex {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  gap:1.5rem;
+  gap: 1.5rem;
   margin: 1.5rem;
 }

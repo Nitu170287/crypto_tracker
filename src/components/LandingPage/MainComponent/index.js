@@ -4,12 +4,12 @@ import iphone from "../../../assets/iphone.png";
 import gradient from "../../../assets/gradient.png";
 import { motion } from "framer-motion";
 
-const MainComponent = () => {
+const MainComponent = ({mode}) => {
   return (
     <div className="flex-info">
       <div className="left-component">
         <motion.h1
-          className="track-crypto-heading"
+          className={"track-crypto-heading-" + mode}
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
@@ -39,7 +39,7 @@ const MainComponent = () => {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5, delay: 1.5 }}
         >
-          <Button text={"Dashboard"}  />
+          <Button text={"Dashboard"} />
           <Button text={"share"} outlined={true} />
         </motion.div>
       </div>
@@ -54,7 +54,7 @@ const MainComponent = () => {
             type: "smooth",
             repeatType: "mirror",
             duration: 2,
-            repeat: Infinity
+            repeat: Infinity,
           }}
         />
         <img src={gradient} alt="gradient" className="gradient" />

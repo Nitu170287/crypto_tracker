@@ -11,14 +11,14 @@ const PriceToggle = ({ priceType, handlePriceChange }) => {
         onChange={handlePriceChange}
         sx={{
           "&.Mui-selected": {
-            color: "var(--blue) !important",
+            color: "var(--orange) !important",
           },
-          borderColor: "var(--blue)",
+          borderColor: "var(--orange)",
           border: "unset !important",
           "& .MuiToggleButtonGroup-grouped": {
             border: "1px solid !important",
-            borderColor: "var(--blue)",
-            color: "var(--blue) !important",
+            borderColor: "var(--orange)",
+            color: "var(--orange) !important",
           },
         }}
       >
