@@ -2,11 +2,11 @@ import Header from "../components/Common/Header"
 import MainComponent from "../components/LandingPage/MainComponent"
 
 
-const HomePage = ()=>{
+const HomePage = ({setMode})=>{
 
     return(
         <div>
-            <Header />
+            <Header setMode={setMode} />
             <MainComponent/>
         </div>
     )

@@ -3,14 +3,17 @@ import "./style.css";
 import TemporaryDrawer from "./drawer";
 import Button from "../Button";
 import { Link } from "react-router-dom";
+import Toggle from "../ToggleBtn";
 
-const Header = () => {
+
+const Header = ({setMode}) => {
   return (
     <div className="navbar">
       <h1 className="logo">
         CryptoTracker<span style={{ color: "#E55604" }}>.</span>
       </h1>
       <div className="links">
+      <Toggle setMode={setMode}/>
         <Link to="/">
           <p className="link">Home</p>
         </Link>

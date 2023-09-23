@@ -23,7 +23,7 @@ const Grid = ({ coin, addedToWatchList, parentUpdateWatchlist }) => {
           }`}
         >
           <div className="coin-info">
-            <img src={coin.image} className="coin-logo" />
+            <img src={coin.image} className="coin-logo" alt={coin.id}/>
             <div className="name-col">
               <p className="coin-symbol">{coin.symbol.toUpperCase()}</p>
               <p className="coin-name">{coin.name}</p>

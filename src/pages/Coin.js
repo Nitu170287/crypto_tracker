@@ -14,7 +14,7 @@ import SelectDays from "../components/Coin/selectDays";
 import { settingChartData } from "../functions/settingChartData";
 import PriceToggle from "../components/Coin/priceToggle";
 
-const CoinPage = () => {
+const CoinPage = ({setMode}) => {
   const { id } = useParams();
   const [isLoading, setIsLoading] = useState(false);
   const [coindata, setCoinData] = useState();
@@ -26,7 +26,7 @@ const CoinPage = () => {
     if (id) {
       getdata();
     }
-  }, [id]);
+  }, [id,getdata]);
 
   async function getdata() {
     // setIsLoading(true);
@@ -73,7 +73,7 @@ const CoinPage = () => {
 
   return (
     <>
-      <Header />
+      <Header setMode={setMode} />
       {isLoading ? (
         <Loader />
       ) : (

@@ -1,14 +1,14 @@
 import { useEffect, useState } from "react";
 import Header from "../components/Common/Header";
 import TabsComponent from "../components/Dashboard/Tabs";
-import axios from "axios";
+
 import SearchBar from "../components/Dashboard/SearchBar";
 import PaginationComponent from "../components/Dashboard/paginationComponent";
 import Loader from "../components/Common/loader";
-import BackToTop from "../components/Common/BackToTop"
-import get100Coins from "../functions/get100Coins"
+import BackToTop from "../components/Common/BackToTop";
+import get100Coins from "../functions/get100Coins";
 
-const DashboardPage = () => {
+const DashboardPage = ({setMode}) => {
   const [coins, setCoins] = useState([]);
   const [search, setSearch] = useState("");
   const [page, setPage] = useState(1);
@@ -32,30 +32,31 @@ const DashboardPage = () => {
   );
 
   useEffect(() => {
-    getData()
+    getData();
   }, []);
 
-  const getData = async ()=>{
-
-    const coins = await get100Coins()
-    if(coins){
+  const getData = async () => {
+    const coins = await get100Coins();
+    if (coins) {
       setCoins(coins);
-        setPaginatedCoin(coins.slice(0, 10));
-        setIsLoading(false);
-  }
+      setPaginatedCoin(coins.slice(0, 10));
+      setIsLoading(false);
     }
-    
+  };
 
   return (
     <>
-      <Header />
-      <BackToTop/>
+      <Header setMode={setMode} />
+      <BackToTop />
       {isLoading ? (
         <Loader />
       ) : (
         <div>
           <SearchBar search={search} onChange={onChange} />
-          <TabsComponent coins={search ? filteredCoins : paginatedCoins}  setSearch={setSearch}/>
+          <TabsComponent
+            coins={search ? filteredCoins : paginatedCoins}
+            setSearch={setSearch}
+          />
           {!search && (
             <PaginationComponent
               page={page}

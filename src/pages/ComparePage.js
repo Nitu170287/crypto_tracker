@@ -12,7 +12,7 @@ import { settingChartData } from "../functions/settingChartData";
 import LineChart from "../components/Coin/lineChart";
 import PriceToggle from "../components/Coin/priceToggle";
 
-const ComparePage = () => {
+const ComparePage = ({setMode}) => {
   const [crypto1, setCrypto1] = useState("bitcoin");
   const [crypto2, setCrypto2] = useState("ethereum");
   const [crypto1Data, setCrypto1Data] = useState();
@@ -26,7 +26,7 @@ const ComparePage = () => {
 
   useEffect(() => {
     getData();
-  }, [getData]);
+  }, []);
 
   async function getData() {
     setIsLoading(false);
@@ -94,7 +94,7 @@ const ComparePage = () => {
 
   return (
     <div>
-      <Header />
+      <Header setMode={setMode}  />
       {isLoading ? (
         <Loader />
       ) : (
