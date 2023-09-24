@@ -54,7 +54,8 @@
 .real-time-heading {
     color: var(--orange);
 }
-.left-component{
+
+.left-component {
     margin-bottom: 35vh;
 }
 
@@ -89,7 +90,7 @@
 
 @media only screen and (max-width: 1200px) {
 
-    .track-crypto-heading,
+    .track-crypto-heading-dark, .track-crypto-heading-light,
     .real-time-heading {
         font-size: 5.5rem;
     }
@@ -98,7 +99,7 @@
 
 @media only screen and (max-width: 1000px) {
 
-    .track-crypto-heading,
+    .track-crypto-heading-dark, .track-crypto-heading-light,
     .real-time-heading {
         font-size: 3.5rem;
     }
@@ -113,25 +114,32 @@
         justify-content: center;
         align-items: center;
     }
-    .left-component{
+
+    .left-component {
         margin-bottom: 0;
     }
 
-    .track-crypto-heading,
+    .track-crypto-heading-dark, .track-crypto-heading-light,
     .real-time-heading {
         text-align: center;
         font-size: 2.5rem;
 
     }
-    .footer{
+
+    .footer {
         position: absolute;
-    top: 148vh;
+        top: 148vh;
     }
 
-    .track-crypto-heading {
+    .track-crypto-heading-dark {
         color: var(--white);
         -webkit-text-stroke-width: 1px;
         -webkit-text-stroke-color: var(--white);
+    }
+ .track-crypto-heading-light {
+        color: var(--black);
+        -webkit-text-stroke-width: 1px;
+        -webkit-text-stroke-color: var(--black);
     }
 
     .track-crypto-heading:hover {

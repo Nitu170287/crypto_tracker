@@ -23,6 +23,10 @@ const SelectCoins = ({ crypto1, crypto2, handleCoinsChange,mode }) => {
         borderColor: "#3e80e9",
       },
     },
+    "@media only screen and (max-width: 800px) ":{
+      height: "1.5rem",
+      fontSize: "0.8rem"
+    }
   };
 
   

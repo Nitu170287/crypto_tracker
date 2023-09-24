@@ -89,9 +89,9 @@ const List = ({ coin, addedToWatchList, parentUpdateWatchlist, mode }) => {
               <p className="market-cap ">${convertNumber(coin.market_cap)}</p>
             </td>
           </Tooltip>
-          <Tooltip title="Market-cap" placement="bottom-start">
+          <Tooltip title="Watchlist" placement="bottom-start">
             <td>
-              <div
+              <div className="watchlist-icon"
                 style={{
                   color: coin.price_change_percentage_24h > 0 ? "green" : "red",
                   paddingLeft: "3rem",
@@ -119,6 +119,12 @@ const List = ({ coin, addedToWatchList, parentUpdateWatchlist, mode }) => {
                         width: "3rem",
                         height: "2rem",
                       },
+                      "@media only screen and (max-width: 800px)":{
+                        "&.MuiSvgIcon-root": {
+                        width: "2rem",
+                        height: "1rem",
+                      }
+                      }
                     }}
                   />
                 )}

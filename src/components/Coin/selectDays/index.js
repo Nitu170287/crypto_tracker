@@ -1,11 +1,10 @@
-
 import "./style.css";
 
 import MenuItem from "@mui/material/MenuItem";
 
 import Select from "@mui/material/Select";
 
-export default function SelectDays({ days, handleDaysChange, noPTag ,mode}) {
+export default function SelectDays({ days, handleDaysChange, noPTag, mode }) {
   return (
     <div className="select-days">
       {!noPTag && <p>Price Change In</p>}
@@ -13,17 +12,21 @@ export default function SelectDays({ days, handleDaysChange, noPTag ,mode}) {
       <Select
         sx={{
           height: "2.5rem",
-          color:  mode==="dark"?"var(--white)": "var(--black)",
+          color: mode === "dark" ? "var(--white)" : "var(--black)",
           "& .MuiOutlinedInput-notchedOutline": {
-            borderColor: mode==="dark"?"var(--white)": "var(--black)",
+            borderColor: mode === "dark" ? "var(--white)" : "var(--black)",
           },
           "& .MuiSvgIcon-root": {
-            color: mode==="dark"?"var(--white)": "var(--black)",
+            color: mode === "dark" ? "var(--white)" : "var(--black)",
           },
           "&:hover": {
             "&& fieldset": {
               borderColor: "#3e80e9",
             },
+          },
+          "@media only screen and (max-width: 800px) ": {
+            height: "1.5rem",
+            fontSize: "0.8rem",
           },
         }}
         labelId="demo-simple-select-label"
