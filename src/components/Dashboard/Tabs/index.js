@@ -13,6 +13,7 @@ export default function TabsComponent({
   coins,
   setSearch,
   displayWatchListData,
+  mode
 }) {
   const [value, setValue] = useState("grid");
   const [watchList, setWatchList] = useState([]);
@@ -35,7 +36,7 @@ export default function TabsComponent({
     setValue(newValue);
   };
   const style = {
-    color: "var(--white)",
+    color: mode==="dark" ? "var(--white)" : "var(--grey)",
     width: "50vw",
     fontSize: "1.2rem",
     fontWeight: 600,
@@ -73,6 +74,7 @@ export default function TabsComponent({
                     key={i}
                     parentUpdateWatchlist={updateWatchlist}
                     addedToWatchList={watchList.indexOf(coin.id) > -1}
+                    mode={mode}
                   />
                 );
               })
@@ -95,6 +97,7 @@ export default function TabsComponent({
                   key={i}
                   parentUpdateWatchlist={updateWatchlist}
                   addedToWatchList={watchList.indexOf(coin.id) > -1}
+                  mode={mode}
                 />
               );
             })}

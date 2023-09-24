@@ -8,8 +8,12 @@
     border-radius: 0.5rem;
 }
 
-.list-row:hover {
+ .dark:hover {
     background-color: var(--darkgrey);
+
+}
+ .light:hover {
+    background-color: #f3f3f3;
 
 }
 

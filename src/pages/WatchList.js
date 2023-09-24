@@ -3,7 +3,7 @@ import Header from "../components/Common/Header";
 import { getCoinData } from "../functions/getCoinData";
 import TabsComponent from "../components/Dashboard/Tabs";
 import { Link } from "react-router-dom";
-import Footer from "../components/Common/Footer";
+
 
 const Watchlist = ({ setMode }) => {
   const [watchlistCoins, setWatchlistCoins] = useState([]);
@@ -46,7 +46,7 @@ const Watchlist = ({ setMode }) => {
   }
 
   return (
-    <div>
+    <div style={{minHeight:"80vh"}}>
       <Header setMode={setMode} />
       {watchlistCoins.length > 0 ? (
         <TabsComponent
@@ -61,7 +61,7 @@ const Watchlist = ({ setMode }) => {
           </Link>
         </div>
       )}
-      <Footer />
+      
     </div>
   );
 };

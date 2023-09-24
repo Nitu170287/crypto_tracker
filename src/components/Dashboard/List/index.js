@@ -10,21 +10,27 @@ import { updateWatchList } from "../../../functions/updateWatchList";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
-const List = ({ coin, addedToWatchList, parentUpdateWatchlist }) => {
+const List = ({ coin, addedToWatchList, parentUpdateWatchlist, mode }) => {
   return coin ? (
     <>
       <ToastContainer />
 
       <Link to={`/coin/${coin.id}`}>
-        <tr className="list-row">
+        <tr className={"list-row " + mode}>
           <Tooltip title="Coin logo" placement="bottom-start">
             <td className="td-image mobile-td-img">
-              <img src={coin.image} className="coin-logo mobile-coin-logo" alt="phone" />
+              <img
+                src={coin.image}
+                className="coin-logo mobile-coin-logo"
+                alt="phone"
+              />
             </td>
           </Tooltip>
           <td>
             <div className="name-col mobile-name-col">
-              <p className="coin-symbol mobile-coin-symbol">
+              <p
+                className={"coin-symbol mobile-coin-symbol coin-symbol-" + mode}
+              >
                 {coin.symbol?.toUpperCase()}
               </p>
               <p className="coin-name mobile-coin-name">{coin.name}</p>
@@ -75,7 +81,7 @@ const List = ({ coin, addedToWatchList, parentUpdateWatchlist }) => {
           </Tooltip>
           <Tooltip title="Market-cap" placement="bottom-start">
             <td className=" desktop-market-cap">
-              <p className="market-cap ">${coin.market_cap.toLocaleString()}</p>
+              <p className={"market-cap coin-symbol-" + mode}>${coin.market_cap.toLocaleString()}</p>
             </td>
           </Tooltip>
           <Tooltip title="Market-cap" placement="bottom-start">

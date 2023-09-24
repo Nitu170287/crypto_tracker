@@ -9,7 +9,7 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 //import { useEffect, useState } from "react";
 
-const Grid = ({ coin, addedToWatchList, parentUpdateWatchlist }) => {
+const Grid = ({ coin, addedToWatchList, parentUpdateWatchlist,mode }) => {
   //const [watchListUpdate, setWatchListUpdate] = useState(addedToWatchList);
 
   return (

@@ -53,10 +53,11 @@ const DashboardPage = ({setMode, mode}) => {
         <Loader />
       ) : (
         <div>
-          <SearchBar search={search} onChange={onChange} />
+          <SearchBar search={search} onChange={onChange} mode={mode}/>
           <TabsComponent
             coins={search ? filteredCoins : paginatedCoins}
             setSearch={setSearch}
+            mode={mode}
           />
           {!search && (
             <PaginationComponent
