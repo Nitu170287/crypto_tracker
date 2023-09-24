@@ -16,7 +16,7 @@ body {
   margin: 0;
   background-color: var(--black);
   color: var(--white);
-  /* height:200vh; */
+  height:100%;
   font-family: 'Inter', sans-serif;
 }
 
@@ -75,4 +75,14 @@ img {
   align-items: center;
   gap: 1.5rem;
   margin: 1.5rem;
+}
+
+.outlined-dark {
+  background-color: var(--black);
+  color: var(--white);
+}
+
+.outlined-light {
+  background-color: var(--white);
+  color: var(--black);
 }

@@ -12,7 +12,15 @@ a {
     z-index: 1000;
     top: 0;
     left: 0;
-    
+
+}
+
+.navbar-light {
+    background-color: var(--white);
+}
+
+.navbar-dark {
+    background-color: var(--black);
 }
 
 .logo {
@@ -32,8 +40,13 @@ a {
     font-size: 1rem;
 }
 
-.link:hover {
+.link-dark:hover {
     color: white;
+    transition: all 0.5s;
+}
+
+.link-light:hover {
+    color: black;
     transition: all 0.5s;
 }
 
@@ -49,13 +62,16 @@ a {
     .link {
         display: none;
     }
-    .navbar{
+
+    .navbar {
         padding: 1.5rem;
     }
-    .link{
+
+    .link {
         font-size: 1rem;
     }
-    .logo{
+
+    .logo {
         font-size: 1rem;
     }
 
@@ -72,7 +88,7 @@ a {
         padding: 1.5rem;
     }
 
-    .drawer-div .link{
+    .drawer-div .link {
         display: block;
     }
 }

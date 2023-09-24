@@ -3,13 +3,14 @@ import Header from "../components/Common/Header";
 import { getCoinData } from "../functions/getCoinData";
 import TabsComponent from "../components/Dashboard/Tabs";
 import { Link } from "react-router-dom";
+import Footer from "../components/Common/Footer";
 
-const Watchlist = ({setMode}) => {
+const Watchlist = ({ setMode }) => {
   const [watchlistCoins, setWatchlistCoins] = useState([]);
 
   useEffect(() => {
     displayWatchListData();
-  }, [displayWatchListData]);
+  }, []);
 
   async function displayWatchListData() {
     const watchlistData = JSON.parse(
@@ -46,7 +47,7 @@ const Watchlist = ({setMode}) => {
 
   return (
     <div>
-      <Header setMode={setMode}  />
+      <Header setMode={setMode} />
       {watchlistCoins.length > 0 ? (
         <TabsComponent
           coins={watchlistCoins}
@@ -60,6 +61,7 @@ const Watchlist = ({setMode}) => {
           </Link>
         </div>
       )}
+      <Footer />
     </div>
   );
 };

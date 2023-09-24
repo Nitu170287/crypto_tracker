@@ -29,7 +29,7 @@ export default function TabsComponent({
 
   useEffect(() => {
     updateWatchlist();
-  }, [updateWatchlist]);
+  }, []);
 
   const handleChange = (event, newValue) => {
     setValue(newValue);

@@ -6,22 +6,22 @@ import { Link } from "react-router-dom";
 import Toggle from "../ToggleBtn";
 
 
-const Header = ({setMode}) => {
+const Header = ({setMode, mode}) => {
   return (
-    <div className="navbar">
+    <div className={"navbar navbar-" + mode}>
       <h1 className="logo">
         CryptoTracker<span style={{ color: "#E55604" }}>.</span>
       </h1>
       <div className="links">
       <Toggle setMode={setMode}/>
         <Link to="/">
-          <p className="link">Home</p>
+          <p className={"link link-"+mode}>Home</p>
         </Link>
         <Link to="/compare">
-          <p className="link">Compare</p>
+          <p className={"link link-"+mode}>Compare</p>
         </Link>
         <Link to="/watchlist">
-          <p className="link">Watchlist</p>
+          <p className={"link link-"+mode}>Watchlist</p>
         </Link>
         <Link to="/dashboard">
           <Button

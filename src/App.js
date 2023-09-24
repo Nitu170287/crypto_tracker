@@ -32,7 +32,7 @@ function App() {
     
       <Routes>
         <Route path="/" element={<HomePage setMode={setMode} mode={mode} />} />
-        <Route path="/dashboard" element={<DashboardPage setMode={setMode} />} />
+        <Route path="/dashboard" element={<DashboardPage setMode={setMode}  mode={mode} />} />
         <Route path="/coin/:id"  element={<CoinPage setMode={setMode}/>} />
         <Route path="/compare"  element={<ComparePage setMode={setMode}/>} />
         <Route path="/watchlist"  element={<Watchlist setMode={setMode}/>} />

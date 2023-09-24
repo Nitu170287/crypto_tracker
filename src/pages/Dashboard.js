@@ -7,8 +7,9 @@ import PaginationComponent from "../components/Dashboard/paginationComponent";
 import Loader from "../components/Common/loader";
 import BackToTop from "../components/Common/BackToTop";
 import get100Coins from "../functions/get100Coins";
+import Footer from "../components/Common/Footer";
 
-const DashboardPage = ({setMode}) => {
+const DashboardPage = ({setMode, mode}) => {
   const [coins, setCoins] = useState([]);
   const [search, setSearch] = useState("");
   const [page, setPage] = useState(1);
@@ -46,7 +47,7 @@ const DashboardPage = ({setMode}) => {
 
   return (
     <>
-      <Header setMode={setMode} />
+      <Header setMode={setMode} mode={mode} />
       <BackToTop />
       {isLoading ? (
         <Loader />
@@ -65,6 +66,7 @@ const DashboardPage = ({setMode}) => {
           )}
         </div>
       )}
+      <Footer/>
     </>
   );
 };

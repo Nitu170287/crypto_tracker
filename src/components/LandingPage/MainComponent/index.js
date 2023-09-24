@@ -40,7 +40,7 @@ const MainComponent = ({mode}) => {
           transition={{ duration: 0.5, delay: 1.5 }}
         >
           <Button text={"Dashboard"} />
-          <Button text={"share"} outlined={true} />
+          <Button text={"share"} outlined={true} mode={mode} />
         </motion.div>
       </div>
       <div className="right-component">
