@@ -5,7 +5,7 @@ import MenuItem from "@mui/material/MenuItem";
 
 import Select from "@mui/material/Select";
 
-export default function SelectDays({ days, handleDaysChange, noPTag }) {
+export default function SelectDays({ days, handleDaysChange, noPTag ,mode}) {
   return (
     <div className="select-days">
       {!noPTag && <p>Price Change In</p>}
@@ -13,12 +13,12 @@ export default function SelectDays({ days, handleDaysChange, noPTag }) {
       <Select
         sx={{
           height: "2.5rem",
-          color: "var(--white)",
+          color:  mode==="dark"?"var(--white)": "var(--black)",
           "& .MuiOutlinedInput-notchedOutline": {
-            borderColor: "var(--white)",
+            borderColor: mode==="dark"?"var(--white)": "var(--black)",
           },
           "& .MuiSvgIcon-root": {
-            color: "var(--white)",
+            color: mode==="dark"?"var(--white)": "var(--black)",
           },
           "&:hover": {
             "&& fieldset": {

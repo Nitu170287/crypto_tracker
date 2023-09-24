@@ -18,14 +18,14 @@ const Grid = ({ coin, addedToWatchList, parentUpdateWatchlist,mode }) => {
 
       <Link to={`/coin/${coin.id}`}>
         <div
-          className={`grid-container ${
+          className={`grid-container grid-container-${mode} ${
             coin.price_change_percentage_24h < 0 && "grid-container-red"
           }`}
         >
           <div className="coin-info">
             <img src={coin.image} className="coin-logo" alt={coin.id}/>
             <div className="name-col">
-              <p className="coin-symbol">{coin.symbol.toUpperCase()}</p>
+              <p className={"coin-symbol coin-symbol-" + mode}>{coin.symbol.toUpperCase()}</p>
               <p className="coin-name">{coin.name}</p>
             </div>
 

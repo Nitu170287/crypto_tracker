@@ -5,7 +5,7 @@ import TabsComponent from "../components/Dashboard/Tabs";
 import { Link } from "react-router-dom";
 
 
-const Watchlist = ({ setMode }) => {
+const Watchlist = ({ setMode,mode }) => {
   const [watchlistCoins, setWatchlistCoins] = useState([]);
 
   useEffect(() => {
@@ -52,6 +52,7 @@ const Watchlist = ({ setMode }) => {
         <TabsComponent
           coins={watchlistCoins}
           displayWatchListData={displayWatchListData}
+          mode={mode}
         />
       ) : (
         <div className="no-search-result">

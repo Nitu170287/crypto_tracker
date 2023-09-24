@@ -1,21 +1,25 @@
 .grid-container {
     width: 300px;
-    
-    
-    border: 2px solid var(--darkgrey);
+
     border-radius: 0.5rem;
 }
-.grid-container-dark{
+
+.grid-container-dark {
     background-color: var(--darkgrey);
+    border: 2px solid var(--darkgrey);
 }
-.grid-container-light{
-    background-color:#f3f3f3;
+
+.grid-container-light {
+    background-color: #f3f3f3;
+    border: 2px solid #f3f3f3;
 }
-.grid-container:hover{
+
+.grid-container:hover {
     border: 2px solid var(--green);
     transition: all 0.3s;
 }
-.grid-container-red:hover{
+
+.grid-container-red:hover {
     border: 2px solid var(--red);
     transition: all 0.3s;
 }
@@ -44,13 +48,15 @@
     font-weight: 600;
     text-transform: capitalize;
     font-size: 1.5rem;
- 
+
     margin: 0;
 }
-.coin-symbol-dark{
+
+.coin-symbol-dark {
     color: var(--white);
 }
-.coin-symbol-light{
+
+.coin-symbol-light {
     color: var(--black);
 }
 
@@ -93,8 +99,8 @@
 }
 
 .chip-red:hover {
-    background-color: var(--red)!important;
-    color: var(--white)!important;
+    background-color: var(--red) !important;
+    color: var(--white) !important;
     transition: all 0.3s;
 }
 
@@ -119,18 +125,20 @@
     transition: all 0.3s;
 }
 
-.curent-price{
+.curent-price {
     margin: 1.5rem;
 }
 
-.total-volume{
+.total-volume {
     color: var(--grey);
     font-weight: 500;
 }
-.add-to-watchlist-icon{
-   margin-left: 2.5rem;
+
+.add-to-watchlist-icon {
+    margin-left: 2.5rem;
 }
-.css-i4bv87-MuiSvgIcon-root{
-    width:3rem;
-    height:2rem;
+
+.css-i4bv87-MuiSvgIcon-root {
+    width: 3rem;
+    height: 2rem;
 }

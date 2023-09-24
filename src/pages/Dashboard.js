@@ -63,6 +63,7 @@ const DashboardPage = ({setMode, mode}) => {
             <PaginationComponent
               page={page}
               handlePageChange={handlePageChange}
+              mode={mode}
             />
           )}
         </div>

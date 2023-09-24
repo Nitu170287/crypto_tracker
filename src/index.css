@@ -59,7 +59,7 @@ img {
 
 }
 
-.grey-wrapper {
+.grey-wrapper-dark {
   display: block;
   width: 90%;
   background-color: var(--darkgrey);
@@ -68,6 +68,16 @@ img {
   padding: 0rem 1.5rem;
 
 }
+.grey-wrapper-light {
+  display: block;
+  width: 90%;
+  background-color: #f3f3f3;
+  margin: 1.5rem auto;
+  border-radius: 0.5rem;
+  padding: 0rem 1.5rem;
+
+}
+
 
 .coin-days-flex {
   display: flex;

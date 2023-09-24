@@ -4,19 +4,19 @@ import MenuItem from "@mui/material/MenuItem";
 import Select from "@mui/material/Select";
 import "./style.css";
 
-const SelectCoins = ({ crypto1, crypto2, handleCoinsChange }) => {
+const SelectCoins = ({ crypto1, crypto2, handleCoinsChange,mode }) => {
   //   const [crypto1, setCrypto1] = useState("bitcoin");
   //   const [crypto2, setCrypto2] = useState("ethereum");
   const [allCoins, setAllCoins] = useState([]);
 
   const styles = {
     height: "2.5rem",
-    color: "var(--white)",
+    color: mode==="dark"?"var(--white)": "var(--black)",
     "& .MuiOutlinedInput-notchedOutline": {
-      borderColor: "var(--white)",
+      borderColor:  mode==="dark"?"var(--white)": "var(--black)",
     },
     "& .MuiSvgIcon-root": {
-      color: "var(--white)",
+      color:  mode==="dark"?"var(--white)": "var(--black)",
     },
     "&:hover": {
       "&& fieldset": {
